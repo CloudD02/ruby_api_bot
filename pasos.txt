@@ -1,0 +1,28 @@
+1.- Entrar en la carpeta desde la terminal "ruby_api_bot".
+
+2.- Exportar desde la terminal el SLACK_CLIENT_ID Y el SLACK_CLIENT_SECRET, escribir:
+export SLACK_CLIENT_ID=358191024146.366203559638 SLACK_CLIENT_SECRET=9fe16fc7b2b733f487e982fecafec4c2
+
+Y dar ENTER.
+
+3.-Levantar el servidor con:
+bundle exec ruby play.rb
+(Se necesita tener bundle instalado)
+
+4.- Para verificar que el servidor este levantado, ir a:
+http://localhost:4567/
+
+Aparecera un "Hello world"
+
+5.-Abrir el archivo index.html con el navegador en el cual ya se este logeado en slack de cloud Computing
+Aparecera un boton que dice:_ Add To Slack, presionarlo.
+Redirigira a: https://slack.com/oauth/authorize?client_id=358191024146.366203559638&scope=incoming-webhook,bot
+
+6.- Dentro de ese link aparece un select para escoger el canal en el cual deseamos que se comunique el bot.
+ Seleccionarlo y presionar en el boton "Autorizar"
+
+7.-Para verificar si el bot se ha añadido al canal, el navegador mostrara un mensaje que dice: "Bot succesfully installed"
+y en el canal de slack que se selecciono aparecerá el mensaje "Se a añadido una integración a este canal"
+
+8.- En ese canal escribir solo: hi
+El bot contestara automáticamente.
